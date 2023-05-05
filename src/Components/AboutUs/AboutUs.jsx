@@ -1,5 +1,5 @@
 import styles from "./AboutUs.module.css"
-import ReadBtn from "./ReadBtn/ReadBtn";
+import ReadBtn from "../ReadBtn/ReadBtn";
 
 const AboutUs = () => {
     return (

@@ -1,0 +1,49 @@
+.section {
+  padding-right: 20px;
+  padding-left: 20px;
+  
+
+  
+  color: var(--mainColor);
+}
+
+.title {
+  margin-bottom: 8px;
+
+  font-family: "Caveat";
+  font-size: 24px;
+  line-height: 1.26;
+}
+
+.text{
+margin-bottom: 8px;
+
+text-align: left;
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 1.22;
+}
+
+.list {
+  margin-left: 8px;
+
+  list-style: ">";
+
+  text-align: left;
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 1.22;
+}
+
+.item {
+  padding-left: 8px;
+}
+
+.item:not(:last-child){
+    margin-bottom: 8px;
+}
+
+.btnCon{
+    display: flex;
+    justify-content: flex-start;
+}
