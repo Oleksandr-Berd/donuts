@@ -1,6 +1,6 @@
 import styles from "./Logo.module.css"
 
-import logoImage from "../Utils/images/logo.png"
+import logoImage from "../../Utils/images/logo.png"
 
 const Logo = () => {
     return (<>
