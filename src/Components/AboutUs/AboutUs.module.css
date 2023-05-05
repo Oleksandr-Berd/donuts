@@ -1,0 +1,48 @@
+.section{
+position: relative;
+
+padding-right: 20px;
+padding-left: 20px;
+padding-top: 150px;
+
+    color: var(--mainColor);
+}
+
+.section:before{
+    content: url(../../Utils/images/pic.png);
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transform: translateX(5%) translateY(-50%);
+}
+
+.title{
+margin-bottom: 8px;
+
+    font-family: "Caveat";
+    font-size: 24px;
+    line-height: 1.26;
+}
+
+.text{
+    text-align: left;
+    font-family: "Montserrat";
+    font-size: 16px;
+    line-height: 1.22;
+}
+
+.text:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.text:last-child{
+    margin-bottom: 32px;
+}
+
+.btnCon{
+    display: flex;
+    justify-content: flex-start;
+}

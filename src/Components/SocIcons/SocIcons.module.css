@@ -1,3 +1,7 @@
+.icon{
+    color: var(--mainColor);
+}
+
 .icon:not(:last-child){
     margin-right: 16px;
 }
