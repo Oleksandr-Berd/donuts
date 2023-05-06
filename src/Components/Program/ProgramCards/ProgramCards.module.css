@@ -1,0 +1,47 @@
+.cadsList{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cardsItem{
+    position: relative;
+}
+
+
+.cardsItem:nth-child(2n){
+    margin-top: 36px;
+}
+
+.img{
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.cardCon{
+padding-top: 50px;
+padding-bottom: 10px;
+
+    text-align: center;
+    background-color: var(--back);
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(171, 129, 108, 0.25);
+}
+
+.cardTitle{
+margin-bottom: 4px;
+
+    font-size: 18px;
+    font-family: "Caveat";
+    color: #000;
+    line-height: 1.26;
+}
+
+.cardText{
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: #000;
+    line-height: 1.22;
+}
