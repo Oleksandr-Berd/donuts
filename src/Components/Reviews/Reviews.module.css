@@ -1,4 +1,92 @@
-.marksList{
+.section {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  transform: translateX(200%) translateY(-50%);
+
+  font-size: 24px;
+  font-family: "Caveat";
+  line-height: 1.26;
+}
+
+.reviewList {
+  background-image: url(../../Utils/images/bg2.png);
+  padding-top: 36px;
+  padding-bottom: 32px;
+  padding-right: 21px;
+  padding-left: 21px;
+}
+
+.avatar {
+  width: 280px;
+  height: 280px;
+  margin-bottom: 8px;
+
+  border-radius: 50%;
+}
+
+.marksList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.starItem:not(:last-child) {
+  margin-right: 4px;
+}
+
+.star {
+  width: 24px;
+  height: 24px;
+}
+
+.name{
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    font-family: "Montserrat";
+    line-height: 1.21;
+}
+
+.text{
+margin-bottom: 32px;
+
+    font-size: 16px;
+    line-height: 1.22;
+}
+
+.btnCon{
     display: flex;
     flex-direction: row;
-justify-content: center;}
+    justify-content: center;
+    align-items: center;
+}
+
+.btnPage{
+   border: none;
+   background-color: transparent;
+}
+
+.btnPage:not(:last-child){
+    margin-right: 12px;
+}
+
+.btnPage:last-child{
+    margin-left: 12px;
+}
+
+.line{
+    margin-bottom: 4px;
+}
+
+.count{
+    color: var(--regBtn);
+    line-height: 1.22;
+    font-size: 14px;
+    font-family: "Montserrat";
+}
