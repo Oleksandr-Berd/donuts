@@ -3,6 +3,7 @@ import Layout from "./Components/Layout/Layout";
 import Header from "./Components/Header/Header";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Program from "./Components/Program/Program";
+import Reviews from "./Components/Reviews/Reviews";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Layout>
         <Header />
         <AboutUs />
-        <Program/>
+        <Program />
+        <Reviews/>
       </Layout>
     </div>
   );
