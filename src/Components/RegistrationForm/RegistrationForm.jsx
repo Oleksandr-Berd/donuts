@@ -1,9 +1,21 @@
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 import styles from "./RegistrationForm.module.css";
 import { useState } from "react";
 import { postUser } from "../../Utils/helpers";
 import { registrationUrl } from "../../Utils/url";
+
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .required("Name is required")
+      .min(2, "Name must be at least 2 characters"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    phone: Yup.string()
+      .required("Phone is required")
+      .min(7, "Phone must be at least 7 characters"),
+  });
+
 
 const RegistrationForm = () => {
 
@@ -13,6 +25,8 @@ const RegistrationForm = () => {
       email: "",
     });
 
+ 
+    
     const handleInput = (evt) => {
         setData({...data,
            [evt.target.name]:evt.target.value
@@ -42,6 +56,7 @@ const RegistrationForm = () => {
           phone: "",
           email: "",
         }}
+        validationSchema={validationSchema}
       >
         <Form className={styles.form} onSubmit={handleSubmit}>
           <Field
@@ -52,9 +67,21 @@ const RegistrationForm = () => {
             className={styles.input}
             onChange={handleInput}
           />
-          <label htmlFor="name" className={styles.label}>
-            Your name
-          </label>
+          {/* <ErrorMessage name="name" /> */}
+          {data.name === "" ? (
+            <label htmlFor="name" className={styles.label}>
+              Your name
+            </label>
+          ) : (
+            <label
+              htmlFor="name"
+              className={styles.label}
+              style={{ display: "none" }}
+            >
+              Your name
+            </label>
+          )}
+
           <Field
             id="phone"
             name="phone"
@@ -63,9 +90,16 @@ const RegistrationForm = () => {
             className={styles.input}
             onChange={handleInput}
           />
-          <label htmlFor="phone" className={styles.label}>
-            Phone number
-          </label>
+          {/* <ErrorMessage name="phone" /> */}
+          {data.phone === "" ? (
+            <label htmlFor="phone" className={styles.label}>
+              Phone number
+            </label>
+          ) : (
+            <label htmlFor="phone" style={{ display: "none" }}>
+              Phone number
+            </label>
+          )}
           <Field
             id="email"
             name="email"
@@ -75,9 +109,16 @@ const RegistrationForm = () => {
             className={styles.input}
             onChange={handleInput}
           />
-          <label htmlFor="email" className={styles.label}>
-            Email
-          </label>
+          {/* <ErrorMessage name="email" /> */}
+          {data.email === "" ? (
+            <label htmlFor="email" className={styles.label}>
+              Email
+            </label>
+          ) : (
+            <label htmlFor="email" style={{ display: "none" }}>
+              Email
+            </label>
+          )}
           <button type="submit" className={styles.btn}>
             Register
           </button>
