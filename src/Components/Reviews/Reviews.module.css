@@ -1,6 +1,8 @@
 .section {
   position: relative;
 
+  min-height: 1340px;
+
   background-image: url(../../Utils/images/bg2.png);
 
 }
