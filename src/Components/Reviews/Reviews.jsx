@@ -4,6 +4,7 @@ import { getData } from "../../Utils/helpers";
 import { reviewsUrl } from "../../Utils/url";
 import { marks } from "../../Utils/marks";
 import button from "../../Utils/images/previous.png"
+import Registration from "../Registration/Registration";
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -67,7 +68,8 @@ const Reviews = () => {
             </button>
           )}
         </div>
-      </ul>
+          </ul>
+          <Registration/>
     </section>
   );
 };

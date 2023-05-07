@@ -1,0 +1,90 @@
+import { Formik, Form, Field } from "formik";
+
+import styles from "./RegistrationForm.module.css";
+import { useState } from "react";
+import { postUser } from "../../Utils/helpers";
+import { registrationUrl } from "../../Utils/url";
+
+const RegistrationForm = () => {
+
+    const [data, setData] = useState({
+      name: "",
+      phone: "",
+      email: "",
+    });
+
+    const handleInput = (evt) => {
+        setData({...data,
+           [evt.target.name]:evt.target.value
+       })
+       
+    }
+
+    const handleSubmit = (evt) => {
+        evt.preventDefault()
+
+        postUser(registrationUrl, data)
+        setData({
+          name: "",
+          phone: "",
+          email: "",
+        });
+    }
+
+  return (
+    <div className={styles.con}>
+      <h3 className={styles.title}>
+        Apply your personal info for registration
+      </h3>
+      <Formik
+        initialValues={{
+          name: "",
+          phone: "",
+          email: "",
+        }}
+      >
+        <Form className={styles.form} onSubmit={handleSubmit}>
+          <Field
+            id="name"
+            name="name"
+            value={data.name}
+            placeholder=""
+            className={styles.input}
+            onChange={handleInput}
+          />
+          <label htmlFor="name" className={styles.label}>
+            Your name
+          </label>
+          <Field
+            id="phone"
+            name="phone"
+            placeholder=""
+            value={data.phone}
+            className={styles.input}
+            onChange={handleInput}
+          />
+          <label htmlFor="phone" className={styles.label}>
+            Phone number
+          </label>
+          <Field
+            id="email"
+            name="email"
+            placeholder=""
+            value={data.email}
+            type="email"
+            className={styles.input}
+            onChange={handleInput}
+          />
+          <label htmlFor="email" className={styles.label}>
+            Email
+          </label>
+          <button type="submit" className={styles.btn}>
+            Register
+          </button>
+        </Form>
+      </Formik>
+    </div>
+  );
+};
+
+export default RegistrationForm;

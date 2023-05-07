@@ -1,5 +1,8 @@
 .section {
   position: relative;
+
+  background-image: url(../../Utils/images/bg2.png);
+
 }
 
 .title {
@@ -12,7 +15,6 @@
 }
 
 .reviewList {
-  background-image: url(../../Utils/images/bg2.png);
   padding-top: 36px;
   padding-bottom: 32px;
   padding-right: 21px;

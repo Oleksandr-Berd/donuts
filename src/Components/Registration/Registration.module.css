@@ -1,0 +1,42 @@
+.con {
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 32px;
+  margin-right: 23px;
+  margin-left: 23px;
+
+  background-color: #fffff9;
+  color: var(--mainColor);
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
+    4px 4px 4px rgba(171, 129, 108, 0.15);
+}
+
+.title {
+  margin-bottom: 20px;
+
+  font-family: "Caveat";
+  font-size: 24px;
+  line-height: 1.26;
+}
+
+.textCon {
+  padding-bottom: 20px;
+  padding-right: 83px;
+  padding-left: 83px;
+  margin-bottom: 8px;
+
+  border-bottom: 1px solid rgba(171, 129, 108, 0.5);
+}
+
+.text {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+.text:not(:last-child) {
+  margin-bottom: 20px;
+}
