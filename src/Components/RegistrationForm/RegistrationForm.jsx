@@ -65,18 +65,12 @@ const RegistrationForm = () => {
               onChange={handleInput}
             />
 
-            {data.name === "" && !errors.name ? (
+            {!errors.name ? (
               <label htmlFor="name" className={styles.label}>
                 Your name
               </label>
             ) : (
-              <label
-                htmlFor="name"
-                className={styles.label}
-                style={{ display: "none" }}
-              >
-                Your name
-              </label>
+              null
             )}
             {errors.name && touched.name ? (
               <div className={styles.errorCon}>{errors.name}</div>
@@ -89,14 +83,12 @@ const RegistrationForm = () => {
               className={styles.input}
               onChange={handleInput}
             />
-            {data.phone === "" && !errors.phone ? (
+            {!errors.phone ? (
               <label htmlFor="phone" className={styles.label}>
                 Phone number
               </label>
             ) : (
-              <label htmlFor="phone" style={{ display: "none" }}>
-                Phone number
-              </label>
+             null
             )}
             {errors.phone && touched.phone ? (
               <div className={styles.errorCon}>{errors.phone}</div>
@@ -112,14 +104,12 @@ const RegistrationForm = () => {
               onChange={handleInput}
             />
 
-            {data.email === "" && !errors.email ? (
+            {!errors.email ? (
               <label htmlFor="email" className={styles.label}>
                 Email
               </label>
             ) : (
-              <label htmlFor="email" style={{ display: "none" }}>
-                Email
-              </label>
+             null
             )}
             {errors.email && touched.email ? (
               <div className={styles.errorCon}>{errors.email}</div>

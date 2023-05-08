@@ -1,7 +1,7 @@
 .con {
   padding-right: 8px;
   padding-left: 8px;
-  margin-bottom: 78px;
+  margin-bottom: 32px;
 }
 
 .title {
@@ -22,6 +22,8 @@
 
 .label {
   position: absolute;
+z-index: 5px;
+
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 400;

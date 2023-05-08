@@ -5,6 +5,7 @@ import { reviewsUrl } from "../../Utils/url";
 import { marks } from "../../Utils/marks";
 import button from "../../Utils/images/previous.png"
 import Registration from "../Registration/Registration";
+import Contact from "../Contact/Contact";
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -69,7 +70,8 @@ const Reviews = () => {
           )}
         </div>
           </ul>
-          <Registration/>
+      <Registration />
+      <Contact/>
     </section>
   );
 };
