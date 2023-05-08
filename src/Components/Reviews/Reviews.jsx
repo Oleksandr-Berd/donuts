@@ -29,7 +29,7 @@ const Reviews = () => {
     };
     
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="reviews">
       <h2 className={styles.title}>Reviews</h2>
       <ul className={styles.reviewList}>
         {reviews.map(({ avatar, mark, name, review, id }) => (
@@ -69,9 +69,9 @@ const Reviews = () => {
             </button>
           )}
         </div>
-          </ul>
+      </ul>
       <Registration />
-      <Contact/>
+      <Contact />
     </section>
   );
 };

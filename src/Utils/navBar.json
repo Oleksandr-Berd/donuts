@@ -1,0 +1,17 @@
+[
+  {
+    "name": "About us",
+    "href": "#aboutUs"
+  },
+  {
+    "name": "Program",
+    "href": "#program"
+  },
+{
+    "name":"Reviews",
+    "href":"#reviews"
+},
+{
+    "name":"Contacts",
+    "href":"#contacts"
+}]

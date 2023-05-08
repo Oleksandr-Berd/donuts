@@ -4,7 +4,7 @@ import ProgramCards from "./ProgramCards/ProgramCards";
 
 const Program = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="program">
       <h2 className={styles.title}>Program</h2>
       <p className={styles.text}>
         Indulge in this immersive sweet treat experience with The Chef Donut

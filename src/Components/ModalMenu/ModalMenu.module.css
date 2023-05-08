@@ -1,0 +1,33 @@
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100vw;
+  height: 648px;
+  padding-top: 25px;
+
+  background-image: url(../../Utils/images/overlay.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.menuCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 26px;
+
+  background-color: transparent;
+  border: none;
+}

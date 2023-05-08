@@ -3,7 +3,7 @@ import ReadBtn from "../ReadBtn/ReadBtn";
 
 const AboutUs = () => {
     return (
-      <section className={styles.section}>
+      <section className={styles.section} id="aboutUs">
         <h2 className={styles.title}>About us</h2>
         <p className={styles.text}>
           Oh My Donut is the shop which adores tasty deserts and spend hours to

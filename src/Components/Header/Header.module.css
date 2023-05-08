@@ -2,22 +2,12 @@
   position: relative;
   padding-top: 8px;
  
-  /* z-index: -2; */
   height: 460px;
 
   background-image: url(../../Utils/images/pic\ donuts.png), url(../../Utils/images/bg.jpg);
   background-repeat: no-repeat;
-  /* background-size: cover; */
 }
 
-/* .header::before {
-  content: url(../../Utils/images/pic\ donuts.png);
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-} */
 
 .iconsCon {
   display: flex;

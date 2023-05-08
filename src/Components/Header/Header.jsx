@@ -4,19 +4,19 @@ import RegisterBtn from "../RegisterBtn/RegisterBtn";
 import SocIcons from "../SocIcons/SocIcons";
 import styles from "./Header.module.css";
 
-const Header = () => {
+const Header = ({toggleModal}) => {
   return (
     <header className={styles.header}>
       <div className={styles.iconsCon}>
         <Logo />
-        <Menu />
+        <Menu toggleModal={toggleModal} />
       </div>
       <div className={styles.textCon}>
         <h1 className={styles.title}>Donut Masterclass with the Donut King</h1>
         <p className={styles.text}>Hosted by Eva Green</p>
       </div>
       <RegisterBtn />
-      <SocIcons/>
+      <SocIcons />
     </header>
   );
 };
