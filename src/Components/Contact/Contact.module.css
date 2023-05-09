@@ -1,0 +1,16 @@
+.title{
+margin-bottom: 16px;
+
+    font-family: "caveat";
+    font-size: 24px;
+    line-height: 1.26;
+    color: var(--mainColor);
+}
+
+.text{
+margin-bottom: 16px;
+
+    font-family: "Montserrat";
+    font-size: 16px;
+    line-height: 1.22;
+}
