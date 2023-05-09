@@ -1,13 +1,13 @@
 .header {
   position: relative;
   padding-top: 8px;
- 
+
   height: 460px;
 
-  background-image: url(../../Utils/images/pic\ donuts.png), url(../../Utils/images/bg.jpg);
+  background-image: url(../../Utils/images/pic\ donuts.png),
+    url(../../Utils/images/bg.jpg);
   background-repeat: no-repeat;
 }
-
 
 .iconsCon {
   display: flex;
@@ -18,7 +18,7 @@
   padding-right: 20px;
 }
 
-.textCon {    
+.textCon {
   width: 224px;
   margin-right: 48px;
   margin-left: 48px;
@@ -44,4 +44,32 @@
   font-style: normal;
   font-family: "Montserrat";
   line-height: 1.22;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 822px;
+padding-top: 0;
+
+    background-image: url(../../Utils/images/bg_tablet.png);
+
+    background-repeat: no-repeat;
+  }
+
+  .iconsCon{
+position: relative;
+
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 0;
+    padding-left: 33px;
+  }
+
+  .donuts{
+position: absolute;
+top: 0;
+left: 289px;
+
+    margin-right: 40px;
+  }
 }
