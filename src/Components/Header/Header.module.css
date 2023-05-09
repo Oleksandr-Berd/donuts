@@ -50,6 +50,8 @@
   .header {
     height: 822px;
 padding-top: 0;
+padding-left: 33px;
+
 
     background-image: url(../../Utils/images/bg_tablet.png);
 
@@ -62,14 +64,19 @@ position: relative;
     align-items: flex-start;
     justify-content: space-between;
     padding-right: 0;
-    padding-left: 33px;
   }
 
   .donuts{
 position: absolute;
 top: 0;
-left: 289px;
+left: 256px;
 
-    margin-right: 40px;
+  }
+
+  .textCon{
+    margin: 0;
+    margin-bottom: 28px;
+
+    text-align: left;
   }
 }

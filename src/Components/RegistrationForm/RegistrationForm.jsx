@@ -2,6 +2,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
 
+
 import styles from "./RegistrationForm.module.css";
 import { useState } from "react";
 import { postUser } from "../../Utils/helpers";
@@ -27,15 +28,32 @@ const RegistrationForm = () => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
 
-    postUser(registrationUrl, data)
-      .catch((error) => toast.error(`${error}`));
+    postUser(registrationUrl, data).catch((error) =>
+      toast.error(`${error}`, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      })
+    );
     setData({
       name: "",
       phone: "",
       email: "",
     });
-    toast("You successfully register!", {
-      position: toast.POSITION.TOP_LEFT,autoClose: 3000 
+    toast.success("You successfully register!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
     });
   };
 
@@ -52,6 +70,7 @@ const RegistrationForm = () => {
         }}
         validationSchema={validationSchema}
       >
+
         <Form className={styles.form} onSubmit={handleSubmit}>
           <Field
             id="name"

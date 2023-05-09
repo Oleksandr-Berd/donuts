@@ -1,4 +1,5 @@
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
 import Layout from "./Components/Layout/Layout";
@@ -20,13 +21,24 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <ToastContainer autoClose={3000} />
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
         {showModalMenu && <ModalMenu toggleModal={handleModalMenu} />}
         <Header toggleModal={handleModalMenu} />
         <AboutUs />
         <Program />
         <Reviews />
-        <Footer/>
+        <Footer />
       </Layout>
     </div>
   );
