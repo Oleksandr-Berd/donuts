@@ -67,5 +67,10 @@ margin-bottom: 8px;
 
     .textCon{
         padding-top: 28px;
+        text-align: left;
+    }
+
+    .title{
+        margin-bottom: 16px;
     }
 }
