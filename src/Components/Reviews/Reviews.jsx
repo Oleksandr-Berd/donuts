@@ -1,3 +1,5 @@
+import { useMediaQuery } from "react-responsive";
+
 import { useEffect, useState } from "react";
 import styles from "./Reviews.module.css";
 import { getData } from "../../Utils/helpers";
@@ -10,11 +12,26 @@ import Contact from "../Contact/Contact";
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     const [page, setPage] = useState(1);
-    const limit = 10
+    let limit
 
+  const isTablet = useMediaQuery({ minWidth: 768 })
+  const isMobile = useMediaQuery({maxWidth:767})
+  
   useEffect(() => {
     const fetchReviews = () => {
-      getData(reviewsUrl, page).then((response) => setReviews(response.data));
+
+      if (isMobile) {
+   getData(reviewsUrl, page, (limit = 1)).then((response) =>
+     setReviews(response.data)
+   );
+}
+      if (isTablet) {
+   getData(reviewsUrl, page, (limit = 3)).then((response) =>
+     setReviews(response.data)
+   );
+}
+     
+     
     };
 
     fetchReviews();
@@ -29,51 +46,117 @@ const Reviews = () => {
     };
     
   return (
-    <section className={styles.section} id="reviews">
-      <h2 className={styles.title}>Reviews</h2>
-      <ul className={styles.reviewList}>
-        {reviews.map(({ avatar, mark, name, review, id }) => (
-          <li className={styles.reviewItem} key={id}>
-            <img src={avatar} alt="avatar" className={styles.avatar} />
-            <ul className={styles.marksList}>
-              {marks.slice(mark * -1).map((el, idx) => (
-                <li className={styles.starItem} key={idx}>
-                  <img src={el} alt="mark" className={styles.star} />
+    <>
+      {isMobile && (
+        <section className={styles.section} id="reviews">
+          <h2 className={styles.title}>Reviews</h2>
+          <ul className={styles.reviewList}>
+            {reviews.map(({ avatar, mark, name, review, id }) => (
+              <li className={styles.reviewItem} key={id}>
+                <img src={avatar} alt="avatar" className={styles.avatar} />
+                <ul className={styles.marksList}>
+                  {marks.slice(mark * -1).map((el, idx) => (
+                    <li className={styles.starItem} key={idx}>
+                      <img src={el} alt="mark" className={styles.star} />
+                    </li>
+                  ))}
+                </ul>
+                <h4 className={styles.name}>{name}</h4>
+                <p className={styles.text}>{review}</p>
+              </li>
+            ))}
+            <div className={styles.btnCon}>
+              {page > 1 ? (
+                <button className={styles.btnPage} onClick={prevPage}>
+                  <img src={button} alt="button" className={styles.line} />
+                </button>
+              ) : (
+                <button className={styles.btnPage} disabled>
+                  <img src={button} alt="button" className={styles.line} />
+                </button>
+              )}
+              <p className={styles.count}>
+                {page}/{limit}
+              </p>
+              {page < 10 ? (
+                <button className={styles.btnPage} onClick={nextPage}>
+                  <img src={button} alt="button" className={styles.line} />
+                </button>
+              ) : (
+                <button className={styles.btnPage} disabled>
+                  <img src={button} alt="button" className={styles.line} />
+                </button>
+              )}
+            </div>
+          </ul>
+          <Registration />
+          <Contact />
+        </section>
+      )}
+      {isTablet && (
+        <section className={styles.section} id="reviews">
+          <h2 className={styles.title}>Reviews</h2>
+          <ul className={styles.reviewList}>
+           {reviews.length > 0 &&
+              <div>
+                <div>
+                  <img
+                    src={reviews[0].avatar}
+                    alt="avatar"
+                    className={styles.avatarSide}
+                  />
+                </div>
+                <li className={styles.reviewItem} key={reviews[1].id}>
+                  <img src={reviews[1].avatar} alt="avatar" className={styles.avatar} />
+                  <ul className={styles.marksList}>
+                    {marks.slice(reviews[1].mark * -1).map((el, idx) => (
+                      <li className={styles.starItem} key={idx}>
+                        <img src={el} alt="mark" className={styles.star} />
+                      </li>
+                    ))}
+                  </ul>
+                  <h4 className={styles.name}>{reviews[1].name}</h4>
+                  <p className={styles.text}>{reviews[1].review}</p>
                 </li>
-              ))}
-            </ul>
-            <h4 className={styles.name}>{name}</h4>
-            <p className={styles.text}>{review}</p>
-          </li>
-        ))}
-        <div className={styles.btnCon}>
-          {page > 1 ? (
-            <button className={styles.btnPage} onClick={prevPage}>
-              <img src={button} alt="button" className={styles.line} />
-            </button>
-          ) : (
-            <button className={styles.btnPage} disabled>
-              <img src={button} alt="button" className={styles.line} />
-            </button>
-          )}
-          <p className={styles.count}>
-            {page}/{limit}
-          </p>
-          {page < 10 ? (
-            <button className={styles.btnPage} onClick={nextPage}>
-              <img src={button} alt="button" className={styles.line} />
-            </button>
-          ) : (
-            <button className={styles.btnPage} disabled>
-              <img src={button} alt="button" className={styles.line} />
-            </button>
-          )}
-        </div>
-      </ul>
-      <Registration />
-      <Contact />
-    </section>
+                <img
+                  src={reviews[2].avatar}
+                  alt="avatar"
+                  className={styles.avatarSide}
+                />
+              </div>
+          }
+            <div className={styles.btnCon}>
+              {page > 1 ? (
+                <button className={styles.btnPage} onClick={prevPage}>
+                  <img src={button} alt="button" className={styles.line} />
+                </button>
+              ) : (
+                <button className={styles.btnPage} disabled>
+                  <img src={button} alt="button" className={styles.line} />
+                </button>
+              )}
+              <p className={styles.count}>
+                {page}/{limit}
+              </p>
+              {page < 10 ? (
+                <button className={styles.btnPage} onClick={nextPage}>
+                  <img src={button} alt="button" className={styles.line} />
+                </button>
+              ) : (
+                <button className={styles.btnPage} disabled>
+                  <img src={button} alt="button" className={styles.line} />
+                </button>
+              )}
+            </div>
+          </ul>
+          <Registration />
+          <Contact />
+        </section>
+      )}
+    </>
   );
 };
 
 export default Reviews;
+
+

@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const getData = async (url, page) => {
-   return await axios.get(`${url}?page=${page}&limit=1`)
+export const getData = async (url, page, limit) => {
+   return await axios.get(`${url}?page=${page}&limit=${limit}`)
 }
 
 export const postUser = async (url, data) => {

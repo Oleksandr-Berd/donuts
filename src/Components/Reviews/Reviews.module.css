@@ -95,3 +95,25 @@ margin-bottom: 32px;
     font-size: 14px;
     font-family: "Montserrat";
 }
+
+@media screen and (min-width:768px){
+  .section{
+    padding-top: 113px;
+      min-height: 1519px;
+    background-image: url(../../Utils/images/Vector\ 13.png);
+  background-repeat: no-repeat;
+
+
+
+  text-align: center;
+  }
+
+  .title{
+    transform: translateX(550%) translateY(-300%);
+  }
+
+  .avatar{
+    width: 336px;
+    height: 336px;
+  }
+}
