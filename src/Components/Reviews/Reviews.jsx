@@ -21,6 +21,7 @@ const Reviews = () => {
     const fetchReviews = () => {
 
       if (isMobile) {
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    getData(reviewsUrl, page, (limit = 1)).then((response) =>
      setReviews(response.data)
    );
@@ -97,17 +98,29 @@ const Reviews = () => {
         <section className={styles.section} id="reviews">
           <h2 className={styles.title}>Reviews</h2>
           <ul className={styles.reviewList}>
-           {reviews.length > 0 &&
-              <div>
-                <div>
+            {reviews.length > 0 && (
+              <div className={styles.reviewsCon}>
+                <div className={styles.sideCon}>
                   <img
                     src={reviews[0].avatar}
                     alt="avatar"
                     className={styles.avatarSide}
                   />
+                  <h4 className={styles.name}>{reviews[0].name}</h4>
+                  <ul className={styles.marksList}>
+                    {marks.slice(reviews[0].mark * -1).map((el, idx) => (
+                      <li className={styles.starItem} key={idx}>
+                        <img src={el} alt="mark" className={styles.star} />
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <li className={styles.reviewItem} key={reviews[1].id}>
-                  <img src={reviews[1].avatar} alt="avatar" className={styles.avatar} />
+                  <img
+                    src={reviews[1].avatar}
+                    alt="avatar"
+                    className={styles.avatar}
+                  />
                   <ul className={styles.marksList}>
                     {marks.slice(reviews[1].mark * -1).map((el, idx) => (
                       <li className={styles.starItem} key={idx}>
@@ -118,13 +131,23 @@ const Reviews = () => {
                   <h4 className={styles.name}>{reviews[1].name}</h4>
                   <p className={styles.text}>{reviews[1].review}</p>
                 </li>
-                <img
-                  src={reviews[2].avatar}
-                  alt="avatar"
-                  className={styles.avatarSide}
-                />
+                <div className={styles.sideCon}>
+                  <img
+                    src={reviews[2].avatar}
+                    alt="avatar"
+                    className={styles.avatarSide}
+                  />
+                  <h4 className={styles.name}>{reviews[2].name}</h4>
+                  <ul className={styles.marksList}>
+                    {marks.slice(reviews[2].mark * -1).map((el, idx) => (
+                      <li className={styles.starItem} key={idx}>
+                        <img src={el} alt="mark" className={styles.star} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-          }
+            )}
             <div className={styles.btnCon}>
               {page > 1 ? (
                 <button className={styles.btnPage} onClick={prevPage}>

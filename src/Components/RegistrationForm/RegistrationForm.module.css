@@ -39,6 +39,11 @@ z-index: 5px;
   transform: translateY(430%);
 }
 
+.inputCon{
+  display: flex;
+  flex-direction: column;
+}
+
 .input {
   height: 20px;
   background-color: transparent;
@@ -90,11 +95,41 @@ z-index: 5px;
   border-radius: 25px;
 }
 
-.errorCon {
-  margin-bottom: 24px;
+@media screen and (min-width:768px){
+  .con{
+    margin: 0;
+    padding: 0;
+  }
 
-  font-family: "Caveat";
-  font-weight: 700;
-  background-color: #fff;
-  color: #ff0000;
+  .title{
+    margin: 0;
+  }
+
+  .btn{
+    margin: 0;
+  }
+}
+
+@media screen and (min-width:768px){
+ .form{
+
+  display: flex;
+  flex-direction: row;
+ }
+
+ .title{
+  margin-bottom: 16px;
+  max-width: 283px;
+
+  text-align: left;
+ }
+
+ .inputCon{
+  margin-right: 54px;
+  width: 237px;
+ }
+
+ .btn{
+  margin-bottom: 70px;
+ }
 }

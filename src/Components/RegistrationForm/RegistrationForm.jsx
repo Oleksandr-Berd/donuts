@@ -70,48 +70,48 @@ const RegistrationForm = () => {
         }}
         validationSchema={validationSchema}
       >
-
         <Form className={styles.form} onSubmit={handleSubmit}>
-          <Field
-            id="name"
-            name="name"
-            value={data.name}
-            placeholder=""
-            className={styles.input}
-            onChange={handleInput}
-          />
+          <div className={styles.inputCon}>
+            <Field
+              id="name"
+              name="name"
+              value={data.name}
+              placeholder=""
+              className={styles.input}
+              onChange={handleInput}
+            />
 
-          <label htmlFor="name" className={styles.label}>
-            Your name
-          </label>
+            <label htmlFor="name" className={styles.label}>
+              Your name
+            </label>
 
-          <Field
-            id="phone"
-            name="phone"
-            placeholder=""
-            value={data.phone}
-            className={styles.input}
-            onChange={handleInput}
-          />
+            <Field
+              id="phone"
+              name="phone"
+              placeholder=""
+              value={data.phone}
+              className={styles.input}
+              onChange={handleInput}
+            />
 
-          <label htmlFor="phone" className={styles.label}>
-            Phone number
-          </label>
+            <label htmlFor="phone" className={styles.label}>
+              Phone number
+            </label>
 
-          <Field
-            id="email"
-            name="email"
-            placeholder=""
-            value={data.email}
-            type="email"
-            className={styles.input}
-            onChange={handleInput}
-          />
+            <Field
+              id="email"
+              name="email"
+              placeholder=""
+              value={data.email}
+              type="email"
+              className={styles.input}
+              onChange={handleInput}
+            />
 
-          <label htmlFor="email" className={styles.label}>
-            Email
-          </label>
-
+            <label htmlFor="email" className={styles.label}>
+              Email
+            </label>
+          </div>
           <button type="submit" className={styles.btn}>
             Register
           </button>

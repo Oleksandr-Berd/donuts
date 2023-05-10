@@ -98,8 +98,8 @@ margin-bottom: 32px;
 
 @media screen and (min-width:768px){
   .section{
-    padding-top: 113px;
       min-height: 1519px;
+      padding-top: 20px;
     background-image: url(../../Utils/images/Vector\ 13.png);
   background-repeat: no-repeat;
 
@@ -109,11 +109,34 @@ margin-bottom: 32px;
   }
 
   .title{
-    transform: translateX(550%) translateY(-300%);
+    transform: translateX(550%) ;
+  }
+
+  .reviewsCon{
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .reviewList{
+    padding-bottom: 40px;
+  }
+  .reviewItem{
+    margin-top: 64px;
   }
 
   .avatar{
     width: 336px;
     height: 336px;
+
+  }
+
+
+
+  .avatarSide{
+    width: 151px;
+    height: 151px;
+
+    border-radius: 50%;
   }
 }
