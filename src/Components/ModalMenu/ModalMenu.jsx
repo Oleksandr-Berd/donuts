@@ -11,9 +11,9 @@ const ModalMenu = ({toggleModal}) => {
     return createPortal(
       <div className={styles.content}>
         <div className={styles.menuCon}>
-          <LogoSvg />
+          <LogoSvg className={styles.logo} />
           <button type="button" className={styles.btn} onClick={toggleModal}>
-            <CloseSvg />
+            <CloseSvg className={styles.close } />
           </button>
         </div>
         <NavBar toggleModal={toggleModal} />

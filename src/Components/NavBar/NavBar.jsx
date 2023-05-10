@@ -10,7 +10,12 @@ const NavBar = ({ toggleModal }) => {
         {isMobile ? (
           <nav className={styles.navList}>
             {navLinks.map(({ name, href }) => (
-              <a href={href} className={styles.navItem} onClick={toggleModal}>
+              <a
+                href={href}
+                className={styles.navItem}
+                onClick={toggleModal}
+                key={name}
+              >
                 {name}
               </a>
             ))}
@@ -18,7 +23,7 @@ const NavBar = ({ toggleModal }) => {
         ) : (
           <nav className={styles.navList}>
             {navLinks.map(({ name, href }) => (
-              <a href={href} className={styles.navItem}>
+              <a href={href} className={styles.navItem} key={name}>
                 {name}
               </a>
             ))}
