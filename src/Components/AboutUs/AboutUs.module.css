@@ -47,3 +47,25 @@ margin-bottom: 8px;
     display: flex;
     justify-content: flex-start;
 }
+
+@media screen and (min-width:768px){
+    .section{
+        position: absolute;
+        top:60%;
+
+        display: flex;
+        padding-right: 36px;
+    }
+
+    .section::before{
+        content: "";
+    }
+
+    .package{
+        margin-right: 32px;
+    }
+
+    .textCon{
+        padding-top: 28px;
+    }
+}
