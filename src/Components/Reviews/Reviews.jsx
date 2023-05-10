@@ -12,31 +12,38 @@ import Contact from "../Contact/Contact";
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     const [page, setPage] = useState(1);
-    let limit
+  let limit
+  
 
   const isTablet = useMediaQuery({ minWidth: 768 })
-  const isMobile = useMediaQuery({maxWidth:767})
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+  
+  if (isMobile) {
+    limit = 1
+  }
+  if (isTablet) {
+    limit=3
+  }
   
   useEffect(() => {
     const fetchReviews = () => {
 
-      if (isMobile) {
-   // eslint-disable-next-line react-hooks/exhaustive-deps
-   getData(reviewsUrl, page, (limit = 1)).then((response) =>
+      
+   getData(reviewsUrl, page, limit ).then((response) =>
      setReviews(response.data)
    );
-}
-      if (isTablet) {
-   getData(reviewsUrl, page, (limit = 3)).then((response) =>
+
+ 
+   getData(reviewsUrl, page, limit).then((response) =>
      setReviews(response.data)
    );
-}
+
      
      
     };
 
     fetchReviews();
-  }, [page]);
+  }, [limit, page]);
 
     const nextPage = () => {
         setPage((prevPage) => prevPage + 1)

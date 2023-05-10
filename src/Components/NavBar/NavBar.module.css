@@ -23,3 +23,24 @@
 .navItem:hover, .navItem:focus{
     color: #876655;
 }
+
+@media screen and (min-width:1280px){
+    .navList{
+        flex-direction: row;
+margin-right: 564px;
+padding-top: 58px;
+
+    }
+
+    .navItem:not(:last-child){
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+
+    .navItem{
+    
+
+        font-size: 18px;
+        font-weight: 400;
+    }
+}

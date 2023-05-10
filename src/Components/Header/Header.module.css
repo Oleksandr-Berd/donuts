@@ -80,3 +80,23 @@ left: 256px;
     text-align: left;
   }
 }
+
+@media screen and (min-width:1280px){
+  .header{
+position: relative;
+
+    background-image: url(../../Utils/images/bg_desktop.png);
+  }
+
+  .header::after{
+    position: absolute;
+top: 0;
+
+    content: url(../../Utils/images/pic\ donuts_desktop.svg);
+  }
+
+  .donutsDesktop{
+    width: 793px;
+    height: 831px;
+  }
+}
