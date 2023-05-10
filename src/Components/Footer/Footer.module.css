@@ -41,3 +41,16 @@
     margin-right: 4px;
 
 }
+
+@media screen and (min-width:768px){
+    .footer{
+        background-image: url(../../Utils/images/Wheat\ flour\ 2.png);
+    }
+
+    .addressCon{
+        margin-top: 60px;
+        padding-left: 32px;
+        padding-right: 96px;
+        justify-content: space-between;
+    }
+}

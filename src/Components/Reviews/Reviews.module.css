@@ -98,7 +98,7 @@ margin-bottom: 32px;
 
 @media screen and (min-width:768px){
   .section{
-      min-height: 1519px;
+      /* min-height: 1519px; */
       padding-top: 20px;
     background-image: url(../../Utils/images/Vector\ 13.png);
   background-repeat: no-repeat;

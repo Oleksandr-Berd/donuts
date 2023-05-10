@@ -71,3 +71,25 @@
   border: none;
   border-radius: 25px;
 }
+
+@media screen and (min-width: 768px){
+  .label:nth-child(4) {
+  transform: translateY(220%) translateX(160%);;
+}
+
+.input:focus + .label:nth-child(4) {
+  transform: translateY(120%) translateX(160%);
+}
+
+.label:nth-child(2) {
+  transform: translateX(530%);;
+}
+
+.input:focus + .label:nth-child(2) {
+  transform: translateX(530%) translateY(-100%);
+}
+
+.btn{
+  margin-bottom: 0;
+}
+}
