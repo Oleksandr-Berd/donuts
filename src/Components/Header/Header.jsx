@@ -2,13 +2,11 @@ import { useMediaQuery } from "react-responsive";
 
 import Logo from "../Logo/Logo";
 import Menu from "../Menu/Menu";
-import donutsDesktop from "../../Utils/images/pic donuts_desktop.png"
 import RegisterBtn from "../RegisterBtn/RegisterBtn";
 import SocIcons from "../SocIcons/SocIcons";
 import styles from "./Header.module.css";
 import {ReactComponent as DonutsSvg} from "../../Utils/images/pic donuts_tablet.svg"
 import NavBar from "../NavBar/NavBar";
-import {ReactComponent as DonutsDesktopSvg} from "../../Utils/images/pic donuts_desktop.svg"
 
 const Header = ({ toggleModal }) => {
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
