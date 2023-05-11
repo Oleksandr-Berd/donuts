@@ -79,10 +79,10 @@
 
 @media screen and (min-width: 1280px) {
   .section {
+
     position: absolute;
     bottom: 0;
     transform: translateY(130%);
-
     justify-content: center;
   }
 
