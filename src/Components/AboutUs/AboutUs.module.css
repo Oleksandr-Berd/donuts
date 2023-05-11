@@ -1,82 +1,113 @@
-.section{
-position: relative;
+.section {
+  position: relative;
 
-padding-right: 20px;
-padding-left: 20px;
-padding-top: 150px;
-padding-bottom: 16px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 150px;
+  padding-bottom: 16px;
 
-    color: var(--mainColor);
+  color: var(--mainColor);
 }
 
-.section:before{
+@media screen and (max-width: 767px) {
+  .section:before {
     content: url(../../Utils/images/pic.png);
-    
+
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
 
     transform: translateX(5%) translateY(-50%);
+  }
 }
 
-.title{
-margin-bottom: 8px;
+.title {
+  margin-bottom: 8px;
 
-    font-family: "Caveat";
-    font-size: 24px;
-    line-height: 1.26;
+  font-family: "Caveat";
+  font-size: 24px;
+  line-height: 1.26;
 }
 
-.text{
-    text-align: left;
-    font-family: "Montserrat";
-    font-size: 16px;
-    line-height: 1.22;
+.text {
+  text-align: left;
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 1.22;
 }
 
-.text:not(:last-child){
-    margin-bottom: 20px;
+.text:not(:last-child) {
+  margin-bottom: 20px;
 }
 
-.text:last-child{
-    margin-bottom: 32px;
+.text:last-child {
+  margin-bottom: 32px;
 }
 
-.btnCon{
+.btnCon {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    position: absolute;
+    top: 60%;
+
     display: flex;
-    justify-content: flex-start;
+    padding-right: 36px;
+  }
+
+  .section::before {
+    content: "";
+  }
+
+  .package {
+    margin-right: 32px;
+  }
+
+  .textCon {
+    padding-top: 28px;
+    text-align: left;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
 }
 
-@media screen and (min-width:768px){
-    .section{
-        position: absolute;
-        top:60%;
+@media screen and (min-width: 1280px) {
+  .section {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(130%);
 
-        display: flex;
-        padding-right: 36px;
-    }
+    justify-content: center;
+  }
 
-    .section::before{
-        content: "";
-    }
+  .section::before {
+    width: 502px;
+    height: 536px;
+    margin-right: 139px;
+    margin-left: 122px;
 
-    .package{
-        margin-right: 32px;
-    }
+    content: url(../../Utils/images/pic_desktop.png);
+  }
 
-    .textCon{
-        padding-top: 28px;
-        text-align: left;
-    }
+  .textCon {
+    width: 392px;
+  }
 
-    .title{
-        margin-bottom: 16px;
-    }
-}
+  .title {
+    margin-bottom: 10px;
 
-@media screen and (min-width:1280px){
-    .section{
-        position: static;
-    }
+    font-size: 36px;
+    line-height: 1.81;
+    font-weight: 400;
+  }
+
+  .text {
+    font-size: 18px;
+  }
 }
