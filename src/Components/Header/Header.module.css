@@ -91,6 +91,7 @@
   .header::after {
     position: absolute;
     top: 0;
+    right: 0;
 
     content: url(../../Utils/images/pic\ donuts_desktop.svg);
   }

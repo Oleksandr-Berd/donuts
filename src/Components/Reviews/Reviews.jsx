@@ -113,7 +113,7 @@ const Reviews = () => {
                     alt="avatar"
                     className={styles.avatarSide}
                   />
-                  <h4 className={styles.name}>{reviews[0].name}</h4>
+
                   <ul className={styles.marksList}>
                     {marks.slice(reviews[0].mark * -1).map((el, idx) => (
                       <li className={styles.starItem} key={idx}>
@@ -121,6 +121,7 @@ const Reviews = () => {
                       </li>
                     ))}
                   </ul>
+                  <h4 className={styles.name}>{reviews[0].name}</h4>
                 </div>
                 <li className={styles.reviewItem} key={reviews[1].id}>
                   <img
@@ -144,7 +145,7 @@ const Reviews = () => {
                     alt="avatar"
                     className={styles.avatarSide}
                   />
-                  <h4 className={styles.name}>{reviews[2].name}</h4>
+
                   <ul className={styles.marksList}>
                     {marks.slice(reviews[2].mark * -1).map((el, idx) => (
                       <li className={styles.starItem} key={idx}>
@@ -152,6 +153,7 @@ const Reviews = () => {
                       </li>
                     ))}
                   </ul>
+                  <h4 className={styles.name}>{reviews[2].name}</h4>
                 </div>
               </div>
             )}

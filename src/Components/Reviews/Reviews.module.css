@@ -5,7 +5,6 @@
 
   background-image: url(../../Utils/images/bg2.png);
   background-repeat: no-repeat;
-
 }
 
 .title {
@@ -48,95 +47,130 @@
   height: 24px;
 }
 
-.name{
-    margin-bottom: 8px;
+.name {
+  margin-bottom: 8px;
 
-    font-size: 14px;
-    font-weight: 500;
-    font-style: italic;
-    font-family: "Montserrat";
-    line-height: 1.21;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+  font-family: "Montserrat";
+  line-height: 1.21;
 }
 
-.text{
-margin-bottom: 32px;
+.text {
+  margin-bottom: 32px;
 
-    font-size: 16px;
-    line-height: 1.22;
+  font-size: 16px;
+  line-height: 1.22;
 }
 
-.btnCon{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.btnCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.btnPage{
-   border: none;
-   background-color: transparent;
+.btnPage {
+  border: none;
+  background-color: transparent;
 }
 
-.btnPage:not(:last-child){
-    margin-right: 12px;
+.btnPage:not(:last-child) {
+  margin-right: 12px;
 }
 
-.btnPage:last-child{
-    margin-left: 12px;
+.btnPage:last-child {
+  margin-left: 12px;
 }
 
-.line{
-    margin-bottom: 4px;
+.line {
+  margin-bottom: 4px;
 }
 
-.count{
-    color: var(--regBtn);
-    line-height: 1.22;
-    font-size: 14px;
-    font-family: "Montserrat";
+.count {
+  color: var(--regBtn);
+  line-height: 1.22;
+  font-size: 14px;
+  font-family: "Montserrat";
 }
 
-@media screen and (min-width:768px){
-  .section{
-      /* min-height: 1519px; */
-      padding-top: 20px;
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 20px;
     background-image: url(../../Utils/images/Vector\ 13.png);
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
 
-
-
-  text-align: center;
+    text-align: center;
   }
 
-  .title{
-    transform: translateX(550%) ;
+  .title {
+    transform: translateX(550%);
   }
 
-  .reviewsCon{
+  .reviewsCon {
     display: flex;
     flex-direction: row;
-
   }
 
-  .reviewList{
+  .reviewList {
     padding-bottom: 40px;
   }
-  .reviewItem{
+  .reviewItem {
     margin-top: 64px;
   }
 
-  .avatar{
+  .avatar {
     width: 336px;
     height: 336px;
-
   }
 
-
-
-  .avatarSide{
+  .avatarSide {
     width: 151px;
     height: 151px;
 
     border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    /* height: 2073px; */
+    margin-top: 77px;
+
+    background-image: url(../../Utils/images/Vector\ 13_desktop.png);
+    background-size: cover;
+  }
+
+  .title {
+    position: static;
+    transform: translateY(0%);
+
+    margin-bottom: 0;
+
+    font-size: 36px;
+    line-height: 1.81;
+  }
+
+  .reviewList {
+    padding-left: 131px;
+    padding-right: 123px;
+    padding-bottom: 0;
+    margin-bottom: 60px;
+  }
+
+  .reviewItem {
+    margin-top: 140px;
+  }
+
+  .avatarSide {
+    width: 288px;
+    height: 288px;
+    margin-bottom: 8px;
+  }
+
+  .avatar {
+    width: 394px;
+    height: 394px;
   }
 }
