@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 import styles from "./RegistrationForm.module.css";
 import { useState } from "react";
-import { postUser } from "../../Utils/helpers";
+import * as API from "../../Utils/helpers";
 import { registrationUrl } from "../../Utils/url";
 
 const validationSchema = Yup.object().shape({
@@ -28,7 +28,7 @@ const RegistrationForm = () => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
 
-    postUser(registrationUrl, data).catch((error) =>
+    API.postUser(registrationUrl, data).catch((error) =>
       toast.error(`${error}`, {
         position: "top-center",
         autoClose: 5000,
