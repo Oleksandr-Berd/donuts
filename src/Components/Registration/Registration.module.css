@@ -78,15 +78,15 @@
     content: url(../../Utils/images/donut4\ 2.png);
   }
 
-.section::after{
-   position: absolute;
+  .section::after {
+    position: absolute;
     z-index: 4;
     top: 0;
     right: 0;
     transform: translateY(30%);
 
     content: url(../../Utils/images/kisspng-party-confetti-birthday-idea-5b3b0e53f123c1\ 1.png);
-}
+  }
 
   .textCon {
     display: flex;
@@ -104,5 +104,47 @@
 
   .text {
     max-width: 90px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .con{
+transform: translateX(25%);
+
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 107px;
+    padding-right: 105px;
+  }
+
+  .section::before{
+    transform: translateX(60%);
+  }
+
+  .section::after{
+    transform: translateY(10%) translateX(10%);
+
+    content: url(../../Utils/images/kisspng-party-confetti-birthday-idea-5b3b0e53f123c1_desktop.png);
+  }
+  
+  .title {
+    margin-bottom: 16px;
+
+    font-size: 36px;
+    line-height: 1.81;
+  }
+
+  .textCon {
+    padding-right: 32px;
+    margin-right: 32px;
+
+    justify-content: flex-start;
+  }
+
+  .text {
+    max-width: 127px;
+    margin-top: 20px;
+
+    font-size: 20px;
   }
 }

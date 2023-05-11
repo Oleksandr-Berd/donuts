@@ -1,22 +1,40 @@
-.title{
-margin-bottom: 16px;
+.title {
+  margin-bottom: 16px;
 
-    font-family: "caveat";
-    font-size: 24px;
+  font-family: "caveat";
+  font-size: 24px;
+  line-height: 1.26;
+  color: var(--mainColor);
+}
+
+.text {
+  margin-bottom: 16px;
+
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 1.22;
+}
+
+@media screen and (min-width: 768px) {
+  .con {
+    margin-top: 380px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .con {
+    margin-top: 430px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+
+    font-size: 36px;
+    font-weight: 400;
     line-height: 1.26;
-    color: var(--mainColor);
-}
+  }
 
-.text{
-margin-bottom: 16px;
-
-    font-family: "Montserrat";
-    font-size: 16px;
-    line-height: 1.22;
-}
-
-@media screen and (min-width:768px){
-    .con{
-        margin-top: 380px;
-    }
+  .text {
+    font-size: 18px;
+  }
 }

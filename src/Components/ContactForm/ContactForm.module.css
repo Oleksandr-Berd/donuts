@@ -93,3 +93,29 @@
   margin-bottom: 0;
 }
 }
+
+@media screen and (min-width: 1280px){
+  .label:nth-child(4) {
+  transform: translateY(220%) translateX(325%);;
+}
+
+.input:focus + .label:nth-child(4) {
+  transform: translateY(120%) translateX(325%);
+}
+
+.label:nth-child(2) {
+  transform: translateX(1090%);;
+}
+
+.input:focus + .label:nth-child(2) {
+  transform: translateX(1090%) translateY(-100%);
+}
+.btn{
+  margin-bottom: 0;
+  padding-right: 67px;
+  padding-left: 67px;
+
+  font-size: 24px;
+  font-weight: 400;
+}
+}

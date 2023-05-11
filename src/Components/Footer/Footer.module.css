@@ -54,3 +54,20 @@
         justify-content: space-between;
     }
 }
+
+@media screen and (min-width:1280px){
+    .footer{
+    position: absolute;
+    z-index: 5;
+    transform: translateY(-100%);
+
+    width: 100%;
+        background-image: url(../../Utils/images/Wheat\ flour\ 1_desktop.png);
+    }
+
+    .addressCon{
+        margin-top: 80px;
+        padding-left: 128px;
+        padding-right: 321px;
+    }
+}
