@@ -7,16 +7,16 @@ const SocIcons = () => {
   return (
     <div className={styles.socIconsCon}>
       <a href="https://twitter.com/UaBerd" className={styles.icon}>
-        <AiOutlineTwitter size={16} />
+        <AiOutlineTwitter size={20} />
       </a>
       <a
         href="https://www.facebook.com/sasha.berdichevsky"
         className={styles.icon}
       >
-        <AiOutlineInstagram size={16} />
+        <AiOutlineInstagram size={20} />
       </a>
       <a href="https://www.instagram.com/berd__man/" className={styles.icon}>
-        <FaFacebookF size={16} />
+        <FaFacebookF size={20} />
       </a>
     </div>
   );

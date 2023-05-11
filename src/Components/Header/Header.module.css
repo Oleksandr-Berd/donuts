@@ -49,31 +49,29 @@
 @media screen and (min-width: 768px) {
   .header {
     height: 822px;
-padding-top: 0;
-padding-left: 33px;
-
+    padding-top: 0;
+    padding-left: 33px;
 
     background-image: url(../../Utils/images/bg_tablet.png);
 
     background-repeat: no-repeat;
   }
 
-  .iconsCon{
-position: relative;
+  .iconsCon {
+    position: relative;
 
     align-items: flex-start;
     justify-content: space-between;
     padding-right: 0;
   }
 
-  .donuts{
-position: absolute;
-top: 0;
-left: 256px;
-
+  .donuts {
+    position: absolute;
+    top: 0;
+    left: 256px;
   }
 
-  .textCon{
+  .textCon {
     margin: 0;
     margin-bottom: 28px;
 
@@ -81,22 +79,50 @@ left: 256px;
   }
 }
 
-@media screen and (min-width:1280px){
-  .header{
-position: relative;
+@media screen and (min-width: 1280px) {
+  .header {
+    position: relative;
+
+    height: 1035px;
 
     background-image: url(../../Utils/images/bg_desktop.png);
   }
 
-  .header::after{
+  .header::after {
     position: absolute;
-top: 0;
+    top: 0;
 
     content: url(../../Utils/images/pic\ donuts_desktop.svg);
   }
 
-  .donutsDesktop{
+  .header::before{
+position: absolute;
+bottom: 0;
+left: 0;
+
+transform: translateY(-10%);
+
+    content: url(../../Utils/images/spoon\ 1.png);
+  }
+
+  .donutsDesktop {
     width: 793px;
     height: 831px;
+  }
+
+  .title {
+    width: 490px;
+    margin-bottom: 16px;
+
+    font-size: 64px;
+    line-height: 1.02;
+    font-weight: 400;
+  }
+
+  .text {
+    margin-bottom: 32px;
+    width: 254px;
+
+    font-size: 24px;
   }
 }

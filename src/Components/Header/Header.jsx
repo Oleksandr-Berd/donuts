@@ -20,14 +20,28 @@ const Header = ({ toggleModal }) => {
         {isTablet && <DonutsSvg className={styles.donuts} />}
 
         {isDesktop ? <NavBar /> : <Menu toggleModal={toggleModal} />}
-        {/* {isDesktop && <DonutsDesktopSvg/>} */}
       </div>
-      <div className={styles.textCon}>
-        <h1 className={styles.title}>Donut Masterclass with the Donut King</h1>
-        <p className={styles.text}>Hosted by Eva Green</p>
-      </div>
-      <RegisterBtn />
-      <SocIcons />
+      {isDesktop ? (
+        <div className={styles.textCon}>
+          <h1 className={styles.title}>
+            Donut Masterclass with the Donut King
+          </h1>
+          <p className={styles.text}>Hosted by Eva Green</p>
+          <RegisterBtn />
+          <SocIcons />
+        </div>
+      ) : (
+        <>
+          <div className={styles.textCon}>
+            <h1 className={styles.title}>
+              Donut Masterclass with the Donut King
+            </h1>
+            <p className={styles.text}>Hosted by Eva Green</p>
+          </div>
+          <RegisterBtn />
+          <SocIcons />
+        </>
+      )}
     </header>
   );
 };
