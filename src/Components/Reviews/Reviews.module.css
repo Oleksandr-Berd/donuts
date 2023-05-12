@@ -1,10 +1,10 @@
 .section {
   position: relative;
 
-  min-height: 1340px;
+  /* min-height: 1340px;
 
   background-image: url(../../Utils/images/bg2.png);
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .title {
@@ -96,13 +96,13 @@
 }
 
 @media screen and (min-width: 768px) {
-  .section {
+  /* .section {
     padding-top: 20px;
     background-image: url(../../Utils/images/Vector\ 13.png);
     background-repeat: no-repeat;
 
     text-align: center;
-  }
+  } */
 
   .title {
     transform: translateX(550%);
@@ -134,14 +134,14 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .section {
+  /* .section {
     width: 1280px;
     height: 1873px;
     margin-top: 77px;
 
     background-image: url(../../Utils/images/Vector\ 13_desktop.png);
     background-size:cover;
-  }
+  } */
 
   .title {
     position: static;

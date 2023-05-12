@@ -57,11 +57,11 @@
 
 @media screen and (min-width:1280px){
     .footer{
-    position: absolute;
-    z-index: 5;
-    transform: translateY(-100%);
+    /* position: absolute; */
+    /* z-index: 5; */
+    /* transform: translateY(-100%); */
 
-    width: 1280px;
+    /* width: 1280px; */
         background-image: url(../../Utils/images/Wheat\ flour\ 1_desktop.png);
     }
 

@@ -10,6 +10,8 @@ import Reviews from "./Components/Reviews/Reviews";
 import { useState } from "react";
 import ModalMenu from "./Components/ModalMenu/ModalMenu";
 import Footer from "./Components/Footer/Footer";
+import HeaderLayout from "./Components/HeaderLayout/HeaderLayout";
+import FooterLayout from "./Components/FooterLayout/FooterLayout";
 
 function App() {
   const [showModalMenu, setShowModalMenu] = useState(false);
@@ -34,11 +36,15 @@ function App() {
           theme="dark"
         />
         {showModalMenu && <ModalMenu toggleModal={handleModalMenu} />}
-        <Header toggleModal={handleModalMenu} />
-        <AboutUs />
+        <HeaderLayout>
+          <Header toggleModal={handleModalMenu} />
+          <AboutUs />
+        </HeaderLayout>
         <Program />
-        <Reviews />
-        <Footer />
+        <FooterLayout>
+          <Reviews />
+          <Footer />
+        </FooterLayout>
       </Layout>
     </div>
   );
