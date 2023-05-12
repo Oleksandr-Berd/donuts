@@ -21,7 +21,7 @@ const Header = ({ toggleModal }) => {
 
         {isDesktop ? <NavBar /> : <Menu toggleModal={toggleModal} />}
       </div>
-      {isDesktop ? (
+      
         <div className={styles.textCon}>
           <h1 className={styles.title}>
             Donut Masterclass with the Donut King
@@ -30,18 +30,7 @@ const Header = ({ toggleModal }) => {
           <RegisterBtn />
           <SocIcons />
         </div>
-      ) : (
-        <>
-          <div className={styles.textCon}>
-            <h1 className={styles.title}>
-              Donut Masterclass with the Donut King
-            </h1>
-            <p className={styles.text}>Hosted by Eva Green</p>
-          </div>
-          <RegisterBtn />
-          <SocIcons />
-        </>
-      )}
+      
     </header>
   );
 };
