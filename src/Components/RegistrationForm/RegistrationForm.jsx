@@ -29,36 +29,18 @@ const RegistrationForm = () => {
     evt.preventDefault();
 
     API.postUser(registrationUrl, data).catch((error) =>
-      toast.error(`${error}`, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      })
+      toast.error(`${error}`)
     );
     setData({
       name: "",
       phone: "",
       email: "",
     });
-    toast.success("You successfully register!", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
+    toast.success("You successfully register!");
   };
 
   return (
-    <div className={styles.con}>
+    <div className={styles.con} >
       <h3 className={styles.title}>
         Apply your personal info for registration
       </h3>
@@ -70,6 +52,7 @@ const RegistrationForm = () => {
         }}
         validationSchema={validationSchema}
       >
+
         <Form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.inputCon}>
             <Field

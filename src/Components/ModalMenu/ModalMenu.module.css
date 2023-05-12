@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   z-index: 100;
-
+  overflow-y: scroll;
   width: 100vw;
-  height: 648px;
+  height:100%;
   padding-top: 25px;
 
   background-image: url(../../Utils/images/overlay.png);
@@ -32,12 +32,12 @@
   border: none;
 }
 
-@media screen and (min-width:768px){
-  .logo{
+@media screen and (min-width: 768px) {
+  .logo {
     margin-right: 170px;
   }
 
-  .menuCon{
+  .menuCon {
     margin-right: 67px;
   }
 }

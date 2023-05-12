@@ -1,7 +1,7 @@
 import styles from "./RegisterBtn.module.css"
 
 const RegisterBtn = () => {
-    return ( <button className={styles.btn}>Register</button> );
+    return ( <a href="#register" className={styles.btn}>Register</a> );
 }
  
 export default RegisterBtn;

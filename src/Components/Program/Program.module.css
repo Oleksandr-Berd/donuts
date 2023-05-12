@@ -6,6 +6,53 @@
   color: var(--mainColor);
 }
 
+.readMoreCon{
+  position: fixed;
+  top: 0;
+  left: 0;
+ z-index: 10;
+overflow-y: scroll;
+
+ display: flex;
+ align-items: flex-start;
+ width: 100%;
+ height: 100%;
+ padding-top: 24px;
+ padding-right: 16px;
+
+  background-image: url(../../Utils/images/overlay.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.readMoreTextCon{
+text-align: center;
+margin-left: 26px;
+}
+
+.btn{
+display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 26px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.textModal{
+width: 75%;
+
+  font-family: "Montserrat";
+  font-size: 24px;
+  line-height: 1.26;
+  text-align: left;
+}
+
+.textModal:not(:last-child){
+  margin-bottom: 24px;
+}
+
 .title {
   margin-bottom: 8px;
 

@@ -1,19 +1,73 @@
 .section {
-  /* position: relative; */
 
   padding-right: 20px;
   padding-left: 20px;
-  /* padding-top: 150px; */
   padding-bottom: 16px;
 
   color: var(--mainColor);
+}
+
+.readMoreCon{
+  position: fixed;
+  top: 0;
+  left: 0;
+ z-index: 10;
+overflow-y: scroll;
+
+ display: flex;
+
+ align-items: flex-start;
+ width: 100%;
+ height: 100%;
+ padding-top: 24px;
+ padding-right: 16px;
+
+  background-image: url(../../Utils/images/overlay.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.textConReadMore{
+
+  text-align: center;
+margin-left: 26px;
+}
+
+.titleModal{
+   margin-bottom: 24px;
+
+  font-family: "Caveat";
+  font-size: 32px;
+  line-height: 1.26;
+}
+
+.textModal{
+padding-right: 36px;
+padding-left: 36px;
+
+   font-family: "Montserrat";
+  font-size: 20px;
+  line-height: 1.26;
+}
+
+.textModal:not(:last-child){
+  margin-bottom: 24px;
+}
+
+.btn{
+display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 26px;
+
+  background-color: transparent;
+  border: none;
 }
 
 @media screen and (max-width: 767px) {
   .section:before {
     content: url(../../Utils/images/pic.png);
 
-    /* position: absolute; */
     top: 0;
     left: 0;
     z-index: 1;

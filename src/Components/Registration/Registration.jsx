@@ -9,7 +9,7 @@ const Registration = () => {
   const isTablet = useMediaQuery({minWidth:768})
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="register">
       {isTablet && <h2 className={styles.title}>Registration</h2>}
       <div className={styles.con}>
         <div className={styles.textCon}>

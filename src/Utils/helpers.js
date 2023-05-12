@@ -17,3 +17,4 @@ export const postUser = async (url, data) => {
      return error;
   }
 };
+
