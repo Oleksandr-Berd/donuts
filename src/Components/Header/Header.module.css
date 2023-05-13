@@ -41,12 +41,12 @@
   line-height: 1.22;
 }
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   .header {
     background-image: url(../../Utils/images/pic\ donuts.png);
     background-repeat: no-repeat;
   }
-}
+} */
 
 @media screen and (min-width: 768px) {
   .header {
@@ -83,24 +83,7 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .header::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    content: url(../../Utils/images/pic\ donuts_desktop.svg);
-  }
-
-  .header::before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    transform: translateY(110%);
-
-    content: url(../../Utils/images/spoon\ 1.png);
-  }
-
+  
   .donutsDesktop {
     width: 793px;
     height: 831px;
