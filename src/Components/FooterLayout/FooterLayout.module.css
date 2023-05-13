@@ -1,0 +1,18 @@
+
+
+@media screen and (min-width:768px) {
+    .layout {
+
+    background-image: url(../../Utils/images/Vector\ 13.png);
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .layout {
+    margin-top: 95px;
+
+    background-image: url(../../Utils/images/Vector\ 13_desktop.png);
+    background-size: cover;
+  }
+}

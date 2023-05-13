@@ -1,0 +1,5 @@
+{
+  "users": [{ "id": 1, "name": "vsevolodych", "phone": "7777777", "email":"777@gmail.com" }],
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "profile": { "name": "typicode" }
+}
