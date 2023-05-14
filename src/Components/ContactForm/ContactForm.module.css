@@ -9,7 +9,6 @@
 
 .label {
   position: absolute;
-  z-index: 5px;
   left: 0;
   transform: translateX(50%);
 

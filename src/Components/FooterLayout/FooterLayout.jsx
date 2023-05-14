@@ -1,7 +1,7 @@
 import styles from "./FooterLayout.module.css"
 
 const FooterLayout = ({children}) => {
-    return <section className={styles.layout}>{children}</section>;
+    return <div className={styles.layout}>{children}</div>;
 }
  
 export default FooterLayout;

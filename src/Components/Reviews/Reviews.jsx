@@ -104,7 +104,7 @@ const Reviews = () => {
       {isTablet && (
         <section className={styles.section} id="reviews">
           <h2 className={styles.title}>Reviews</h2>
-          <ul className={styles.reviewList}>
+          <div className={styles.reviewList}>
             {reviews.length > 0 && (
               <div className={styles.reviewsCon}>
                 <div className={styles.sideCon}>
@@ -180,7 +180,7 @@ const Reviews = () => {
                 </button>
               )}
             </div>
-          </ul>
+          </div>
           <Registration />
           <Contact />
         </section>

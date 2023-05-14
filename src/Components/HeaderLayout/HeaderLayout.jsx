@@ -1,7 +1,7 @@
 import styles from "./HeaderLayout.module.css"
 
 const HeaderLayout = ({children}) => {
-    return (<section className={styles.layout}>{children }</section> );
+    return (<div className={styles.layout}>{children }</div> );
 }
  
 export default HeaderLayout;

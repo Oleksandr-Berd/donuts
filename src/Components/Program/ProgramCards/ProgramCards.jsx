@@ -1,13 +1,13 @@
 import styles from "./ProgramCards.module.css"
 
-import img from "../../../Utils/images/Frame 23.png";
-import img2 from "../../../Utils/images/Frame 24.png";
-import img3 from "../../../Utils/images/Frame 25.png";
-import img4 from "../../../Utils/images/Frame 26.png";
-import icon from "../../../Utils/images/Frame 19.png";
-import icon2 from "../../../Utils/images/Frame 20.png";
-import icon3 from "../../../Utils/images/Frame 21.png";
-import icon4 from "../../../Utils/images/Frame 22.png";
+import img from "../../../Utils/images/Frame23.png";
+import img2 from "../../../Utils/images/Frame24.png";
+import img3 from "../../../Utils/images/Frame25.png";
+import img4 from "../../../Utils/images/Frame26.png";
+import icon from "../../../Utils/images/Frame19.png";
+import icon2 from "../../../Utils/images/Frame20.png";
+import icon3 from "../../../Utils/images/Frame21.png";
+import icon4 from "../../../Utils/images/Frame22.png";
 
 
 
