@@ -1,28 +1,46 @@
-.layout{
-margin-bottom: 16px;
+.layout {
+  margin-bottom: 16px;
 
   background-image: url(../../Utils/images/bg.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
 
 @media screen and (min-width:768px) {
-   .layout {
+  .layout {
     height: 622px;
-margin-bottom: 160px;
+    margin-bottom: 160px;
 
     background-image: url(../../Utils/images/bg_tablet.png);
-    background-size: contain;
+    background-size: cover;
   }
 }
 
 @media screen and (min-width:1280px) {
-    .layout {
-/* min-width: 100%; */
+
+  .layout {
+    /* min-width: 100%; */
     height: 1035px;
 
     background-image: url(../../Utils/images/bg_desktop.png);
-    background-size: contain;
+    background-size: cover;
+  }
+
+  .layout::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: url(../../Utils/images/pic\ donuts_desktop.svg);
+  }
+
+  .layout::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transform: translateY(110%);
+
+    content: url(../../Utils/images/spoon\ 1.png);
   }
 }

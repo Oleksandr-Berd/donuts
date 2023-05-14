@@ -22,6 +22,12 @@ function App() {
 
   return (
     <div className="App">
+      <HeaderLayout>
+        <Layout>
+          <Header toggleModal={handleModalMenu} />
+          <AboutUs />
+        </Layout>
+      </HeaderLayout>
       <Layout>
         <ToastContainer
           position="top-center"
@@ -37,16 +43,14 @@ function App() {
           theme="dark"
         />
         {showModalMenu && <ModalMenu toggleModal={handleModalMenu} />}
-        <HeaderLayout>
-          <Header toggleModal={handleModalMenu} />
-          <AboutUs />
-        </HeaderLayout>
         <Program />
-        <FooterLayout>
-          <Reviews />
-          <Footer />
-        </FooterLayout>
       </Layout>
+      <FooterLayout>
+        <Layout>
+          <Reviews />
+        </Layout>
+        <Footer />
+      </FooterLayout>
     </div>
   );
 }
