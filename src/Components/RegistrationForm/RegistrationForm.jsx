@@ -55,45 +55,51 @@ const RegistrationForm = () => {
 
         <Form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.inputCon}>
-            <Field
-              id="name"
-              name="name"
-              value={data.name}
-              placeholder=""
-              className={styles.input}
-              onChange={handleInput}
-            />
 
-            <label htmlFor="name" className={styles.label}>
-              Your name
-            </label>
+            <div className='formControl'>
+              <Field
+                id="name"
+                name="name"
+                value={data.name}
+                placeholder=""
+                className='input'
+                onChange={handleInput}
+              />
 
-            <Field
-              id="phone"
-              name="phone"
-              placeholder=""
-              value={data.phone}
-              className={styles.input}
-              onChange={handleInput}
-            />
+              <label htmlFor="email" className='label'>
+                Your name
+              </label>
+            </div>
 
-            <label htmlFor="phone" className={styles.label}>
-              Phone number
-            </label>
-
-            <Field
-              id="email"
-              name="email"
-              placeholder=""
-              value={data.email}
-              type="email"
-              className={styles.input}
-              onChange={handleInput}
-            />
-
-            <label htmlFor="email" className={styles.label}>
-              Email
-            </label>
+            <div className='formControl'>
+              <Field
+                id="phone"
+                name="phone"
+                placeholder=""
+                value={data.phone}
+                className='input'
+                onChange={handleInput}
+              />
+              <label htmlFor="email" className='label'>
+                Phone number
+              </label>
+            </div>
+            
+            <div className='formControl'>
+              <Field
+                id="email"
+                name="email"
+                placeholder=""
+                value={data.email}
+                type="email"
+                className='input'
+                onChange={handleInput}
+              />
+              <label htmlFor="email" className='label'>
+                Email
+              </label>
+            </div>
+            
           </div>
           <button type="submit" className={styles.btn}>
             Register

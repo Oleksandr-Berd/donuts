@@ -23,33 +23,40 @@ const ContactForm = () => {
       question: "",
     });
     toast.success("Your request is successfully sent!");
-    
-      
+
+
   };
 
   return (
     <Formik initialValue={{ email: "", question: "" }}>
       <Form className={styles.form} onSubmit={handleSubmit}>
-        <Field
-          id="emailReq"
-          name="emailReq"
-          value={request.emailReq}
-          className={styles.input}
-          onChange={handleInputRequest}
-        ></Field>
-        <label htmlFor="emailReq" className={styles.label}>
-          Email
-        </label>
-        <Field
-          id="question"
-          name="question"
-          value={request.question}
-          className={styles.input}
-          onChange={handleInputRequest}
-        ></Field>
-        <label htmlFor="question" className={styles.label}>
-          Type your question
-        </label>
+
+        <div className='formControl'>
+          <Field
+            id="emailReq"
+            name="emailReq"
+            value={request.emailReq}
+            className='input'
+            onChange={handleInputRequest}
+          ></Field>
+          <label htmlFor="emailReq" className='label'>
+            Email
+          </label>
+        </div>
+        
+        <div className='formControl'>
+          <Field
+            id="question"
+            name="question"
+            value={request.question}
+            className='input'
+            onChange={handleInputRequest}
+          ></Field>
+          <label htmlFor="question" className='label'>
+            Type your question
+          </label>
+        </div>
+        
         <button type="submit" className={styles.btn}>
           Send
         </button>
