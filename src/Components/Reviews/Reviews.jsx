@@ -58,6 +58,7 @@ const Reviews = () => {
       {isMobile && (
         <section className={styles.section} id="reviews">
           <h2 className={styles.title}>Reviews</h2>
+          
           <ul className={styles.reviewList}>
             {reviews.map(({ avatar, mark, name, review, id }) => (
               <li className={styles.reviewItem} key={id}>
@@ -73,6 +74,7 @@ const Reviews = () => {
                 <p className={styles.text}>{review}</p>
               </li>
             ))}
+
             <div className={styles.btnCon}>
               {page > 1 ? (
                 <button className={styles.btnPage} onClick={prevPage}>
@@ -101,6 +103,7 @@ const Reviews = () => {
           <Contact />
         </section>
       )}
+
       {isTablet && (
         <section className={styles.section} id="reviews">
           <h2 className={styles.title}>Reviews</h2>
@@ -137,7 +140,7 @@ const Reviews = () => {
                     ))}
                   </ul>
                   <h4 className={styles.name}>{reviews[1].name}</h4>
-                  <p className={styles.text}>{reviews[1].review}</p>
+                  {/* <p className={styles.text}>{reviews[1].review}</p> */}
                 </li>
                 <div className={styles.sideCon}>
                   <img
@@ -157,6 +160,9 @@ const Reviews = () => {
                 </div>
               </div>
             )}
+
+            { reviews.length && <p className={styles.text}>{reviews[1].review}</p> }
+            
             <div className={styles.btnCon}>
               {page > 1 ? (
                 <button className={styles.btnPage} onClick={prevPage}>
