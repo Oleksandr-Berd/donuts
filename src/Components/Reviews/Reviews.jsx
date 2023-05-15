@@ -160,10 +160,9 @@ const Reviews = () => {
                 </div>
               </div>
             )}
+
+            { reviews.length && <p className={styles.text}>{reviews[1].review}</p> }
             
-            {
-              reviews.length && <p className={styles.text}>{reviews[1].review}</p>
-            }
             <div className={styles.btnCon}>
               {page > 1 ? (
                 <button className={styles.btnPage} onClick={prevPage}>
