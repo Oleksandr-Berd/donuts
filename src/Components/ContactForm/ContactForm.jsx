@@ -1,67 +1,81 @@
-import { Formik, Form, Field } from "formik";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import styles from "./ContactForm.module.css";
-import { useState } from "react";
 import { toast } from "react-toastify";
 
 import * as API from "../../Utils/helpers";
 import { registrationUrl } from "../../Utils/url";
 
 const ContactForm = () => {
-  const [request, setRequest] = useState({ emailReq: "", question: "" });
 
-  const handleInputRequest = (evt) => {
-    setRequest({ ...request, [evt.target.name]: evt.target.value });
-  };
+  const validationSchema = Yup.object({
+    question: Yup.string().min(2, "Too Short!").required("Question is required"),
+    email: Yup.string().email("Invalid email").required("Email is required")
+  });
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    API.postUser(registrationUrl, request).catch((error) =>
-      toast.error(`${error}`)
-    );
-    setRequest({
-      emailReq: "",
-      question: "",
-    });
-    toast.success("Your request is successfully sent!");
-
-
-  };
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      question: ''
+    },
+    validationSchema,
+    onSubmit: (values, { resetForm }) => {
+      API.postUser(registrationUrl, values).catch((error) =>
+        toast.error(`${error}`)
+      );
+      toast.success("Your request is successfully sent!");
+      resetForm();
+    },
+  });
 
   return (
-    <Formik initialValue={{ email: "", question: "" }}>
-      <Form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={formik.handleSubmit}>
 
-        <div className='formControl'>
-          <Field
-            id="emailReq"
-            name="emailReq"
-            value={request.emailReq}
-            className='input'
-            onChange={handleInputRequest}
-          ></Field>
-          <label htmlFor="emailReq" className='label'>
-            Email
-          </label>
-        </div>
-        
-        <div className='formControl'>
-          <Field
-            id="question"
-            name="question"
-            value={request.question}
-            className='input'
-            onChange={handleInputRequest}
-          ></Field>
-          <label htmlFor="question" className='label'>
-            Type your question
-          </label>
-        </div>
-        
-        <button type="submit" className={styles.btn}>
-          Send
-        </button>
-      </Form>
-    </Formik>
+      <div className='formControl'>
+        <input
+          id="email"
+          name="email"
+          value={formik.values.email}
+          className='input'
+          type="email"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+        />
+        <label htmlFor="email" className='label'>
+          Email
+        </label>
+        {
+          formik.errors.email
+          ? <div name="email" className="formError">{formik.errors.email}</div>
+          : null
+        }
+      </div>
+
+      <div className='formControl'>
+        <input
+          id="question"
+          name="question"
+          type="text"
+          value={formik.values.question}
+          className='input'
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          
+        />
+        <label htmlFor="question" className='label'>
+          Type your question
+        </label>
+        {
+          formik.errors.question
+          ? <div name="question" className="formError">{formik.errors.question}</div>
+          : null
+        }
+      </div>
+
+      <button type="submit" className={styles.btn}>
+        Send
+      </button>
+    </form>
   );
 };
 

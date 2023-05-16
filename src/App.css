@@ -5,8 +5,13 @@
 
 /* Form elements */
 
-.formControl{
+.formControl {
   position: relative;
+}
+
+.formError {
+  text-align: left;
+  margin: -15px 0 25px 0;
 }
 
 .label {
